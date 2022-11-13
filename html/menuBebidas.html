@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/grid.css">
+    <title>Menu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="../js/comportamento.js"></script>
+    <script src="../js/saveFoods.js"></script>
+  </head>
+
+  <body class="bg-dark">
+    <div class="container text-center">
+        <div class="gridMainPedir">
+
+            <div class="header">
+                <div class="gridHeader border-bottom border-start border-end border-dark">
+                    <button type="button" class="btn btn-outline-white btnHome"> <img src="../bootstrap-icons-1.9.1/house.svg" alt="Bootstrap" width="50" height="50" onclick=destinoHome()> </button>
+                    <h1 class="display-2 title">SustainableFoody</h1>
+                    <button type="button" class="btn btn-outline-white btnCart" onclick=destinoPedir()> <img src="../bootstrap-icons-1.9.1/basket.svg" alt="Bootstrap" width="50" height="50"> </button>
+                </div>
+            </div>
+
+            <div class="other">
+                <div class="gridFood">
+                    <div class="menuF border-bottom border-start border-end border-dark">
+                        <button type="button" id="btnEntradas" class="btn btn-outline-white" onclick=destinoPedirEntradas()>Entradas</button>
+                        <button type="button" id="btnPratos" class="btn btn-outline-white" onclick=destinoPedirPratos()>Pratos Principais</button>
+                        <button type="button" id="btnSobremesas" class="btn btn-outline-white" onclick=destinoPedirSobremesas()>Sobremesas</button>
+                        <button type="button" id="btnBebidas" class="btn btn-secondary">Bebidas</button><!--agora-->
+                        <button type="button" id="btnOutro" class="btn btn-outline-white" onclick=destinoPedirOutros()>Outras coisa</button>
+                    </div>
+                    <div class="food1">
+                        <button type="button" id="btnfood" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalPrato1" onclick="getPlateName('Bebidas1','1')">Sumo de Laranja</button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modalPrato1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Sumo de Laranja</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body text-start">
+                                        <p><img src="../bootstrap-icons-1.9.1/card-text.svg" alt="Bootstrap">&emsp;Sumo natural de laranja do Algarve.</p>
+                                        <p><img src="../bootstrap-icons-1.9.1/geo-alt.svg" alt="Bootstrap">&emsp;Algarve</p>
+                                        <p><img src="../bootstrap-icons-1.9.1/eye.svg" alt="Bootstrap">&emsp;30 cl</p>
+                                        <p><img src="../bootstrap-icons-1.9.1/clock.svg" alt="Bootstrap">&emsp;5 minutos</p> 
+                                        <p><img src="../bootstrap-icons-1.9.1/cash-coin.svg" alt="Bootstrap">&emsp;2 €</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                    <button type="button" class="btn btn-primary" onclick="savePlate('Bebidas1','1')">Adicionar <span class="badge bg-secondary" id="bgMol1">0</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="food2">
+                        <button type="button" id="btnfood" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalPrato2" onclick="getPlateName('Bebidas2','2')">Sumo de Limão</button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modalPrato2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Sumo de Limão</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body text-start"> 
+                                        <p><img src="../bootstrap-icons-1.9.1/card-text.svg" alt="Bootstrap">&emsp;Sumo natural de limão.</p>
+                                        <p><img src="../bootstrap-icons-1.9.1/geo-alt.svg" alt="Bootstrap">&emsp;Sicília</p>
+                                        <p><img src="../bootstrap-icons-1.9.1/eye.svg" alt="Bootstrap">&emsp;30 cl</p>
+                                        <p><img src="../bootstrap-icons-1.9.1/clock.svg" alt="Bootstrap">&emsp;5 minutos</p> 
+                                        <p><img src="../bootstrap-icons-1.9.1/cash-coin.svg" alt="Bootstrap">&emsp;2 €</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                    <button type="button" class="btn btn-primary" onclick="savePlate('Bebidas2','2')">Adicionar <span class="badge bg-secondary" id="bgMol2">0</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="food3">
+                        <button type="button" id="btnfood" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalPrato3" onclick="getPlateName('Bebidas3','3')">Sumo de Frutas Vermelhas</button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modalPrato3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Sumo de Frutas Vermelhas</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body text-start">
+                                        <p><img src="../bootstrap-icons-1.9.1/card-text.svg" alt="Bootstrap">&emsp;Sumo natural de frutas vermelhas.</p>
+                                        <p><img src="../bootstrap-icons-1.9.1/geo-alt.svg" alt="Bootstrap">&emsp;Portugal</p>
+                                        <p><img src="../bootstrap-icons-1.9.1/eye.svg" alt="Bootstrap">&emsp;30 cl</p>
+                                        <p><img src="../bootstrap-icons-1.9.1/clock.svg" alt="Bootstrap">&emsp;5 minutos</p> 
+                                        <p><img src="../bootstrap-icons-1.9.1/cash-coin.svg" alt="Bootstrap">&emsp;2 €</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                    <button type="button" class="btn btn-primary" onclick="savePlate('Bebidas3','3')">Adicionar <span class="badge bg-secondary" id="bgMol3">0</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="food4">
+                        <button type="button" id="btnfood" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalPrato4" onclick="getPlateName('Bebidas4','4')">Coca-Cola</button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modalPrato4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Coca-Cola</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body text-start">
+                                        <p><img src="../bootstrap-icons-1.9.1/card-text.svg" alt="Bootstrap">&emsp;Refrigerante carbonado.</p>
+                                        <p><img src="../bootstrap-icons-1.9.1/geo-alt.svg" alt="Bootstrap">&emsp;Portugal</p>
+                                        <p><img src="../bootstrap-icons-1.9.1/eye.svg" alt="Bootstrap">&emsp;33 cl</p>
+                                        <p><img src="../bootstrap-icons-1.9.1/cash-coin.svg" alt="Bootstrap">&emsp;2 €</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                    <button type="button" class="btn btn-primary" onclick="savePlate('Bebidas4','4')">Adicionar <span class="badge bg-secondary" id="bgMol4">0</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="food5">
+                        <button type="button" id="btnfood" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalPrato5" onclick="getPlateName('Bebidas5','5')">Água</button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modalPrato5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Água</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body text-start"> 
+                                        <p><img src="../bootstrap-icons-1.9.1/card-text.svg" alt="Bootstrap">&emsp;Sem gás.</p>
+                                        <p><img src="../bootstrap-icons-1.9.1/geo-alt.svg" alt="Bootstrap">&emsp;Portugal</p>
+                                        <p><img src="../bootstrap-icons-1.9.1/eye.svg" alt="Bootstrap">&emsp;50 cl</p>
+                                        <p><img src="../bootstrap-icons-1.9.1/cash-coin.svg" alt="Bootstrap">&emsp;2 €</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                    <button type="button" class="btn btn-primary"  onclick="savePlate('Bebidas5','5')">Adicionar <span class="badge bg-secondary" id="bgMol5">0</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="Sfood6">
+                        <button type="button" id="btnfood" class="btn btn-outline-secondary btn-block" data-bs-toggle="modal" data-bs-target="#modalPrato6" onclick="getPlateName('Bebidas6','6')">Água Gaseificada</button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modalPrato6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Água Com Gás</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body text-start">
+                                        <p><img src="../bootstrap-icons-1.9.1/card-text.svg" alt="Bootstrap">&emsp;Água com gás.</p>
+                                        <p><img src="../bootstrap-icons-1.9.1/geo-alt.svg" alt="Bootstrap">&emsp;Portugal</p>
+                                        <p><img src="../bootstrap-icons-1.9.1/eye.svg" alt="Bootstrap">&emsp;50 cl</p>
+                                        <p><img src="../bootstrap-icons-1.9.1/cash-coin.svg" alt="Bootstrap">&emsp;2 €</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                    <button type="button" class="btn btn-primary" onclick="savePlate('Bebidas6','6')">Adicionar <span class="badge bg-secondary" id="bgMol6">0</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="voltar">
+                        <button type="button" class="btn btn-secondary btn-block" onclick=paginaDestino()><img src="../bootstrap-icons-1.9.1/arrow-left-short.svg"> voltar</button>
+                    </div>
+                    
+                    <div class="conti">
+                        <button type="button" class="btn btn-secondary" onclick=destinoPedir()>Finalizar Pedido</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/grid.css">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="../js/comportamento.js"></script>
+</head>
+
+<body class="bg-dark">
+    <div class="container text-center">
+        <div class="gridMainMenu">
+
+            <div class="header">
+                <div class="gridHeader gridHeader border-bottom border-start border-end border-dark">
+                    <button type="button" class="btn btn-outline-white btnHome" onclick=destinoHome()> <img
+                            src="../bootstrap-icons-1.9.1/house.svg" alt="Bootstrap" width="50" height="50"> </button>
+                    <h1 class="display-2 title">SustainableFoody</h1>
+                    <button type="button" class="btn btn-outline-white btnCart visually-hidden"> <img
+                            src="../bootstrap-icons-1.9.1/basket.svg" alt="Bootstrap" width="50" height="50"> </button>
+                </div>
+            </div>
+
+            <div class="other">
+
+                <div class="gridDividirPagamento">
+
+                    <div class="headerDividir">
+                        <h1>Dividir o pagamento</h1>
+                    </div>
+
+                   
+                    <div class="quantosDividir">
+                            <label><strong>Deseja dividir o total em quantas partes?</strong> </label>
+                            <input type="number" id="quantity" name="quantity" min="1" max="10" value="0" size="2">
+                            <button type="button" id="btnOK" class="btn btn-outline-black" onclick=>OK</button>
+                    </div>
+
+                    <div class="numeroTelemovel">
+                            <strong>Número de telemóvel:</strong>
+                            <label><input type="text" name="phone" size="10"></label>
+
+                    </div>
+                    <div class="totalPPessoa">
+                        <strong>Total por pessoa: <span id="preco">XX</span> €</strong>
+                    </div>
+        
+                    <div class="btnVoltar">
+                        <button type="button" class="btn btn-secondary btn-block" onclick=paginaDestino()><img
+                                src="../bootstrap-icons-1.9.1/arrow-left-short.svg"> voltar</button>
+                    </div>
+                    <div class="btnPagar">
+                        <button type="button" class="btn btn-secondary" onclick=destinoFinalizarReserva()>Pagar</button>
+                    </div>
+                </div>
+</body>
+
+</html>

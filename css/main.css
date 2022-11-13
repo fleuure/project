@@ -1,0 +1,15 @@
+#btnfood{
+    width: 160px;
+    height: 160px;
+}
+
+div.scroll {
+    background-color: #eaeaea;
+    width: 500px;
+    height: 200px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid black;
+  }

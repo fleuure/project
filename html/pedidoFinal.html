@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/grid.css">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="../js/comportamento.js"></script>
+  </head>
+
+  <body class="bg-dark">
+    <div class="container text-center">
+      <div class="gridMainMenu">
+
+        <div class="header">
+            <div class="gridHeader gridHeader border-bottom border-start border-end border-dark">
+                <button type="button" class="btn btn-outline-white btnHome"  onclick=destinoHome()> <img src="../bootstrap-icons-1.9.1/house.svg" alt="Bootstrap" width="50" height="50"> </button>
+                <h1 class="display-2 title">SustainableFoody</h1>
+                <button type="button" class="btn btn-outline-white btnCart visually-hidden"> <img src="../bootstrap-icons-1.9.1/basket.svg" alt="Bootstrap" width="50" height="50"> </button>
+            </div>
+        </div>
+
+        <div class="other">
+            <div class="gridFinalizarPedido">
+                <div class="hearderFin">
+                    <h1>O seu pedido foi realizado com sucesso</h1>
+                </div>
+                <div class="infoPedido">
+                    <div class="scroll">
+                        <div id="list-Pratos" class="list-group">
+                            <a class="list-group-item w-100">Vazio</a>
+                            <a class="list-group-item w-100">Vazio</a>
+                            <a class="list-group-item w-100">Vazio</a>
+                            <a class="list-group-item w-100">Vazio</a>
+                            <a class="list-group-item w-100">Vazio</a>
+                            <a class="list-group-item w-100">Vazio</a>
+                            <a class="list-group-item w-100">Vazio</a>
+                            <a class="list-group-item w-100">Vazio</a>
+                            <a class="list-group-item w-100">Vazio</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="infoTempo">
+                    <strong>Tempo médio de espera: <span id="tempo">XX</span> mim</strong>
+                </div>
+                <div class="infoPreco">
+                    <strong>Total: <span id="preco">XX</span> €</strong>
+                </div>
+                <div class="voltar">
+                    <button type="button" class="btn btn-secondary btn-block visually-hidden" onclick=paginaDestino()><img src="../bootstrap-icons-1.9.1/arrow-left-short.svg"> voltar</button>
+                </div>
+                
+                <div class="conti">
+                    <button type="button" class="btn btn-secondary" onclick=destinoHome()>Home</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/finalizarPedido1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  </body>
+
+</html>

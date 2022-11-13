@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/grid.css">
+    <title>Opções</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  </head>
+
+  <body class="bg-dark">
+    <div class="container text-center">
+      <div class="gridMainMenu">
+
+        <div class="header">
+            <div class="gridHeader gridHeader border-bottom border-start border-end border-dark">
+                <button type="button" class="btn btn-outline-white btnHome" onclick=destinoHome()> <img src="../bootstrap-icons-1.9.1/house.svg" alt="Bootstrap" width="50" height="50"> </button>
+                <h1 class="display-2 title">SustainableFoody</h1>
+                <button type="button" class="btn btn-outline-white btnCart visually-hidden"> <img src="../bootstrap-icons-1.9.1/basket.svg" alt="Bootstrap" width="50" height="50"> </button>
+            </div>
+        </div>
+
+        <div class="other text-start">
+            <div class="gridOpcoes">
+                <div class="yesNo">
+                    <strong>Yes / No</strong>
+                </div>
+                <div class="option1 text-center" id="opcaoPedido">
+                    Deseja fazer um pedido ?
+                </div>
+                <div class="yesNo1">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="pedidoYes 1" value="option1" onclick=yes(this.id)>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="pedidoNo 1" value="option2" checked onclick=no(this.id)>
+                    </div>
+                </div>
+                <div class="option2 text-center" id="opcaoReservar">
+                    Deseja reservar uma mesa ?
+                </div>
+                <div class="yesNo2">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="reservarYes 2" value="option1" onclick=yes(this.id)>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="reservarNo 2" value="option2" checked onclick=no(this.id)>
+                    </div>
+                </div>
+                <div class="option3 text-center" id="opcaoPagar">
+                    Deseja efetuar o pagamento na aplicação
+                </div>
+                <div class="yesNo3">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="pagamentoYes 3" value="option1" onclick=yes(this.id)>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="pagamentoNo 3" value="option2" checked onclick=no(this.id)>
+                    </div>
+                </div>
+                <div class="voltar text-end">
+                    <button type="button" class="btn btn-secondary btn-block" onclick=paginaDestino()><img src="../bootstrap-icons-1.9.1/arrow-left-short.svg"> voltar</button>
+                </div>
+                <div class="conti">
+                    <button type="button" class="btn btn-secondary btn-block contiBt" onclick=verifyPageInfo() data-bs-target="#modalOpcoes" data-bs-toggle="modal"> continuar <img src="../bootstrap-icons-1.9.1/arrow-right-short.svg"></button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="modalOpcoes" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Finalizar Pedido</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body text-start">
+                                    Tem a certeza que quer finalizar o pedido ?
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn btn-success" onclick=destinoFinal()>Avançar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/comportamento.js"></script>
+    <script src="../js/options.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+  </body>
+
+</html>
